@@ -19,3 +19,5 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/goodbye.sh
       shell: bash
+    - run: ${{ github.action_path }}/scripts/install-geth.sh
+      shell: bash
