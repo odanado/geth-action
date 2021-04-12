@@ -16,5 +16,5 @@ jobs:
       run: |
         echo ${{ steps.geth.outputs.address }}
         echo ${{ steps.geth.outputs.private_key }}
-        echo ${{ steps.geth.outputs.address }}
+        echo ${{ steps.geth.outputs.password }}
       shell: bash
