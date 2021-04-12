@@ -8,3 +8,7 @@ jobs:
     - uses: actions/checkout@v2
     - id: foo
       uses: ./
+    - name: Display the path
+      run: |
+        curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://localhost:8501 -H "Content-Type: application/json"
+      shell: bash
