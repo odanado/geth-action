@@ -23,5 +23,5 @@ runs:
       run: docker-compose run --rm geth ./scripts/init.sh
       shell: bash
     - id: run
-      run: docker-compose up
+      run: docker-compose up -d
       shell: bash
