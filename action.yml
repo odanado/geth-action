@@ -1,7 +1,7 @@
 name: 'Geth Action'
 description: 'Private chain of Ethereum for test using geth'
 outputs:
-  rpc-url:
+  rpc_url:
     description: "url of JSON RPC"
     value: http://localhost:8501
 runs:

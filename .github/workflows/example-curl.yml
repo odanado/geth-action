@@ -10,5 +10,5 @@ jobs:
       uses: ./
     - name: curl
       run: |
-        curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://localhost:8501 -H "Content-Type: application/json"
+        curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' ${{ steps.geth.outputs.rpc_url }} -H "Content-Type: application/json"
       shell: bash
