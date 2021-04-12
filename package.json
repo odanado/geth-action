@@ -1,0 +1,8 @@
+{
+  "name": "geth-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:odanado/geth-action.git",
+  "author": "odan <odan3240@gmail.com>",
+  "license": "MIT"
+}

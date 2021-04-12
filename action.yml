@@ -8,22 +8,6 @@ inputs:
 outputs:
   random-number:
     description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
-  using: "composite"
-  steps:
-    - run: echo Hello ${{ inputs.who-to-greet }}.
-      shell: bash
-    - id: random-number-generator
-      run: echo "::set-output name=random-id::$(echo $RANDOM)"
-      shell: bash
-    - run: ${{ github.action_path }}/goodbye.sh
-      shell: bash
-    - run: docker run -d -p 30303:30303 ethereum/client-go
-      shell: bash
-    - id: rpc-url
-      run: echo "::set-output name=RPC_URL::http://localhost:30303"
-      shell: bash
-    - id: client-version
-      run: curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://localhost:30303
-      shell: bash
+  using: 'node12'
+  main: 'src/index.js'
