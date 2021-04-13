@@ -16,18 +16,6 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - id: pwd
-      run: pwd
-      shell: bash
-    - id: ls
-      run: ls -la
-      shell: bash
-    - id: echo
-      run: echo ${{ github.action_path }}
-      shell: bash
-    - id: pwd2
-      run: cd ${{ github.action_path }}; pwd
-      shell: bash
     - id: init
       run: cd ${{ github.action_path }}; docker-compose run --rm geth ./scripts/init.sh
       shell: bash
