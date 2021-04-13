@@ -13,6 +13,12 @@ outputs:
   password:
     description: "account of passowrd"
     value: "password"
+  network_id:
+    description: "network id"
+    value: "10412"
+  chain_id:
+    description: "chain id"
+    value: "10412"
 runs:
   using: "composite"
   steps:
