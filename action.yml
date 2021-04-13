@@ -16,12 +16,12 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - id: pwd
+      run: pwd
+      shell: bash
     - id: init
       run: docker-compose run --rm geth ./scripts/init.sh
       shell: bash
     - id: run
       run: docker-compose up -d
-      shell: bash
-    - id: pwd
-      run: pwd
       shell: bash
