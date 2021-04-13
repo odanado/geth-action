@@ -19,6 +19,9 @@ runs:
     - id: pwd
       run: pwd
       shell: bash
+    - id: ls
+      run: ls -la
+      shell: bash
     - id: init
       run: docker-compose run --rm geth ./scripts/init.sh
       shell: bash
