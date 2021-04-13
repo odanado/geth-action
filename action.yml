@@ -22,3 +22,6 @@ runs:
     - id: run
       run: docker-compose up -d
       shell: bash
+    - id: pwd
+      run: pwd
+      shell: bash
