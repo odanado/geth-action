@@ -22,6 +22,12 @@ runs:
     - id: ls
       run: ls -la
       shell: bash
+    - id: echo
+      run: echo ${{ github.action_path }}
+      shell: bash
+    - id: pwd2
+      run: cd ${{ github.action_path }}; pwd
+      shell: bash
     - id: init
       run: docker-compose run --rm geth ./scripts/init.sh
       shell: bash
