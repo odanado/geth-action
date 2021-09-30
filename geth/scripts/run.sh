@@ -8,11 +8,11 @@ geth \
     --syncmode 'full' \
     --nat none \
     --port 30310 \
-    --rpc \
-    --rpcaddr '0.0.0.0' \
-    --rpcport 8501 \
-    --rpcvhosts '*' \
-    --rpcapi 'personal,eth,net,web3,txpool,miner,debug' \
+    --http \
+    --http.addr '0.0.0.0' \
+    --http.port 8501 \
+    --http.vhosts '*' \
+    --http.api 'personal,eth,net,web3,txpool,miner,debug' \
     --networkid '10412' \
     --mine \
     --miner.etherbase '0x4cdBd835fE18BD93ccA39A262Cff72dbAC99E24F' \
