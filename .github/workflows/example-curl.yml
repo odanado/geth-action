@@ -8,6 +8,8 @@ jobs:
     - uses: actions/checkout@v2
     - id: geth
       uses: ./
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
     - name: curl
       run: |
         curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' ${{ steps.geth.outputs.rpc_url }} -H "Content-Type: application/json"
